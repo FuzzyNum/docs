@@ -1,6 +1,6 @@
 ---
 Title: 'Learning Rate Scheduling'
-Description: 'Learning rate scheduling involves planned changes to the Stochastic Gradient Descent (SGD) learning rate of a neural network, allowing the function to avoid oscillations and learn more efficiently.'
+Description: 'Learning rate scheduling involves planned changes to the learning rate of a neural network, allowing the function to avoid oscillations and learn more efficiently.'
 Subjects:
   - 'Machine Learning'
   - 'Data Science'
@@ -21,7 +21,7 @@ A **Learning Rate Schedule** is a method which determines routine modifications 
 
 ## Review: What are Learning Rates?
 
-- Learning Rates are mathematical constants chosen as hyperparameters for your neural network. Learning Rates scale the difference between Expected and Predicted outcomes as determined by the optimization algorithm, thus directly impacting the process of backpropagation. 
+- Learning Rates are mathematical constants chosen as hyperparameters for your neural network. Learning Rates scale the difference between Expected and Predicted outcomes as determined by the optimization algorithm, thus directly impacting the process of [Backpropagation](https://www.codecademy.com/resources/docs/ai/neural-networks/backpropagation). 
 
 - Higher Learning Rates will cause your neural network to make larger adjustments, which can be more time-efficient but tend to be volatile and unpredictable. This will cause the predictions of your network to oscillate without converging to the desired maxima or minima of the optimization problem.
 
@@ -34,7 +34,7 @@ Because of the inflexibility of constant learning rates, many developers choose 
 ## Constant
 
 - Surprise, surprise! You can choose a constant learning rate for the entire duration of training. This isn't very complex, and is a simple approach that many higher-level developers also use. 
-## Example: This specifies the learning rate as 0.05, without accounting for momentum or decay.
+## Example:
     ```py
     import keras
     keras.optimizers.SGD(lr=0.05, momentum=0.0, decay=0.0, nesterov=False)
